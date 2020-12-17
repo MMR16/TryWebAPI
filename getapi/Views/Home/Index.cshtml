@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <label for="Url">Url </label>
+    <input type="text" name="Url" id="Adress">
+</div>
+    </br>
+<div>
+    <label for="Verb">Method</label>
+    <!-- <input type="Verb" name="Method" id="Verb"> -->
+    <select name="Verb" id="Verb">
+        <option value="Get">Get</option>
+        <option value="post">post</option>
+        <option value="delete">delete</option>
+        <option value="put">put</option>
+    </select>
+</div>
+    </br>
+<div>
+    <label for="Body">Body</label>
+    <input type="text" name="Body" id="Body">
+</div>
+    </br>
+<button id="BTN">Apply</button>
+
+<div id="Info">
+</div>
+
+
+<script>
+        const Adress = document.getElementById("Adress").value;
+        const Verb = document.getElementById("Verb").value.stringify;
+        const Meth = document.getElementById("Verb");
+        const Body = document.getElementById("Body").innerText;
+        const Info = document.getElementById("Info");
+        const BTN = document.getElementById("BTN");
+    BTN.addEventListener("click", fetch(Adress)
+        .then(response => response.json())
+        .then(data => Info.innerHTML = data)));
+</script>
